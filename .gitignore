@@ -1,0 +1,26 @@
+# Build folders
+build/
+out/
+bin/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+
+# Executables
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dll
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Tests output
+Testing/
