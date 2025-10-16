@@ -27,7 +27,7 @@ private:
 
     std::shared_ptr<IWeatherDataSource> m_source;
     std::shared_ptr<IForecastStrategy> m_strategy;
-    std::vector<std::shared_ptr<IWeatherListener>> listeners_;
+    std::vector<std::shared_ptr<IWeatherListener>> m_listeners;
     std::mutex m_mutex;
     ForecastResult m_lastForecast;
 };

@@ -19,7 +19,7 @@ void WeatherMonitor::setStrategy(std::shared_ptr<IForecastStrategy> strat) {
 
 void WeatherMonitor::addListener(std::shared_ptr<IWeatherListener> listener) {
     std::lock_guard<std::mutex> lock(m_mutex);
-    listeners_.push_back(std::move(listener));
+    m_listeners.push_back(std::move(listener));
 }
 
 void WeatherMonitor::updateData() {
@@ -55,7 +55,7 @@ void WeatherMonitor::updateData() {
     std::vector<std::shared_ptr<IWeatherListener>> listenersCopy;
     {
         std::lock_guard<std::mutex> lock(m_mutex);
-        listenersCopy = listeners_;
+        listenersCopy = m_listeners;
     }
     for (auto &l : listenersCopy) {
         if (l) l->onWeatherDataUpdated(data);
