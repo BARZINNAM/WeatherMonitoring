@@ -1,6 +1,20 @@
 # WeatherMonitoring
 
-A C++ project simulating a forcasting weather application.  
+A C++ project simulating a forcasting weather application. 
+
+To build and run this project, your system should have: 
+
+| Requirement            | Description                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------- |
+| **C++ Compiler**       | A C++17 or later compatible compiler (e.g., GCC ≥ 9.0, Clang ≥ 10.0, or MSVC ≥ 2019). |
+| **CMake**              | Version **3.15** or higher, used for project configuration and building.              |
+| **Build System**       | `make`, `ninja`, or Visual Studio/MSYS2 build tools.                                  |
+| **GoogleTest (GTest)** | For running unit tests                                                                |
+| **Operating System**   | Windows, Linux, or macOS. Tested under MSYS2 MinGW64 and Ubuntu.                      |
+| **Optional**           | A terminal/console environment to view interactive menu output.                       |
+
+
+
 GoogleTest is added as a submodule to this project from github. Please first execute the following command: 
 
 1) git clone https://github.com/BARZINNAM/WeatherMonitoring.git  
