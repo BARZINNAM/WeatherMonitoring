@@ -13,7 +13,7 @@ add_library(WeatherMonitorLib
     src/APIClient.cpp
     src/ConsoleLogger.cpp
     src/LocalSensor.cpp
-    src/SimpleForeCast.cpp
+    src/SimpleForecast.cpp
     src/WeatherMonitor.cpp
     src/AppController.cpp
 )
@@ -39,7 +39,7 @@ include_directories(
 )
 
 add_executable(TestWeatherMonitoring 
-    test/test.cpp
+    test/Test.cpp
 )
 
 target_link_libraries(TestWeatherMonitoring

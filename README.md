@@ -29,9 +29,27 @@ Please execute the following commands to build the necessary libraries for Googl
 
 Inside the build folder please execute the following command for starting the WeatherMonitoring application :
 
-./WeatherMonitoring.exe
+./WeatherMonitoring.exe  
+
+You'll see a menu like this:  
+
+============================
+ Weather Monitor Main Menu
+============================
+1. Use LocalSensor (random)
+2. Use APIClient (static data)
+3. SimpleForecast
+4. AdvancedForecast
+5. Update data once
+6. Auto update (5 iterations)
+0. Exit
+> 
+
 
 Inside the build folder please execute the following command for performing the unit tests :
 
 ./TestWeatherMonitoring.exe
+
+
+
 
