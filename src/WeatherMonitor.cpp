@@ -6,7 +6,6 @@ WeatherMonitor& WeatherMonitor::instance() {
     return inst;
 }
 
-//&&src
 void WeatherMonitor::setDataSource(std::shared_ptr<IWeatherDataSource> src) {
     std::lock_guard<std::mutex> lock(m_mutex);
     m_source = std::move(src);
@@ -62,7 +61,6 @@ void WeatherMonitor::updateData() {
     }
 }
 
-// WeatherMonitor.cpp
 ForecastResult WeatherMonitor::getLastForecast() {
     std::lock_guard<std::mutex> lock(m_mutex);
     return m_lastForecast;

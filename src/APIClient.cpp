@@ -7,7 +7,7 @@ class APIClient : public IWeatherDataSource {
 public:
     APIClient() {
         // deterministic sample data useful for tests
-        data_ = {
+        m_data = {
             {20.0, 50.0, 3.0},
             {21.5, 55.0, 2.5},
             {19.8, 60.0, 4.0}
@@ -26,20 +26,20 @@ public:
 
     std::string name() const override { return "APIClient"; }
 
-    void setData(const std::vector<WeatherData>& v) { data_ = v; idx_ = 0; }
+    void setData(const std::vector<WeatherData>& v) { m_data = v; m_idx = 0; }
 
 private:
 
     WeatherData next() 
     {
-        if (data_.empty()) return WeatherData{};
-        WeatherData d = data_[idx_ % data_.size()];
-        ++idx_;
+        if (m_data.empty()) return WeatherData{};
+        WeatherData d = m_data[m_idx % m_data.size()];
+        ++m_idx;
         return d;
     }
     // TODO m_data
-    std::vector<WeatherData> data_;
-    size_t idx_{0};
+    std::vector<WeatherData> m_data;
+    size_t m_idx{0};
 };
 
 std::shared_ptr<IWeatherDataSource> createAPIClient() { return std::make_shared<APIClient>(); }
